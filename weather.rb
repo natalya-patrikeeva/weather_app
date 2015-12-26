@@ -6,6 +6,8 @@ def determine_weather(location)
   weather = Weatherman::Client.new
   response = weather.lookup_by_location(location)
   forecast = response.description
+  puts response.forecasts
+  #puts response.methods
   # puts forecast
   split = forecast.split(' />')
 
